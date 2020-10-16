@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+   
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input required value="<%= topic.title %>" type="text" class="form-control" id="title" name="title">
+           
+          </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input required value="<%= topic.author %>" type="text" class="form-control" id="author" name="author">
+           
+          </div>
+          <div class="form-group">
+            <label for="body">Text</label>
+            <textarea    type="text" class="form-control" id="body"  required name="body"><%= topic.text %></textarea>
+            
+          </div>
+          <div class="form-group">
+            <label for="desc">Description</label>
+            <textarea  type="text" class="form-control" id="desc" required  name="desc"> <%= topic.desc %></textarea>
+            <div class="form-group">
+              <label for="topic" >Topic</label>
+              <select required name="topic" id="topic" class="custom-select"> 
+               <option value="programing">Programing</option>
+               <option value="culture">Culture</option>
+               <option value="sport">Sport</option>
+              </select>
+            </div>
+           
+              <div class="form-group w-90">
+                <label for="inputform "><h1>Set image</h1> </label>
+               
+                <input  type="file"  class="form-control-file " id="inputform"  name="myImg" required value="<%= topic.author %>">
+              </div>
+             
+            
+             
+          
+          </div>
+          <a href="/" class="btn btn-light btn-outline-dark">Cancel</a>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    
+    
+</body>
+</html>

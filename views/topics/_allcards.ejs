@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-desk mt-3 col-md-10 m-0 p-0 w-100 ">
+       <div class="row justify-content-center justify-content-between">
+        <% topics.forEach(topic=>{ %>
+          <div class="col-md-6">
+
+            <div class="card mb-3  p-0  " style="height: 8em;" >
+              <div class="row no-gutters p-0 m-0 h-100 container gutter-container ">
+                  <div class="  p-0 m-0 h-100  ">
+                    <img src="uploads/<%= topic.myImg %>" class="card-img rounded-0 p-0 m-0 h-100  " alt="<%=topic.myImg %>">
+                  </div>
+                  <div class=" p-0 card-text">
+                    <div class="card-body  w-100 ">
+                      <a href="/topics/<%=topic.slug %>" class="w-100"> 
+                        <h5 class="card-title text-center p-0"><%= topic.title %> </h5>
+                      </a>
+                      
+                     
+                    </div>
+                      
+                      </div>
+                    </div>
+  
+                  </div>
+
+          </div>
+          
+           
+      <% } )%> 
+
+       </div>
+          
+     
+    </div>
+    
+</body>
+</html>

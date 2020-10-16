@@ -1,0 +1,27 @@
+{
+  "name": "blogapp",
+  "version": "1.0.0",
+  "description": "Personal Blog",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "josip",
+    "frljic",
+    "blog"
+  ],
+  "author": "Josip Frljić",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "marked": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.5",
+    "slugify": "^1.4.5"
+  }
+}
