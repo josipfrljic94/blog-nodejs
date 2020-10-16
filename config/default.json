@@ -1,0 +1,4 @@
+{
+    "mongoURL":"mongodb+srv://josipfrljic:html5css3php@clusterdb.b3swj.mongodb.net/<dbname>?retryWrites=true&w=majority"
+    
+}

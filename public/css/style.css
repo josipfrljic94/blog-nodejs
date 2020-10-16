@@ -11,15 +11,7 @@ body{
      justify-items: center;
      text-align: center;
 }
-/* .card-container{
-    width: 100%;
-    display: grid;
-   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-   justify-content: center;
-  height: 70vh;
-  
-   
-} */
+
 
 .card-custom{
     width: 95%;
