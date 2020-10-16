@@ -51,6 +51,6 @@ app.get('/programing', async (req,res)=>{
    
   })
 
-
+const PORT= process.env.PORT || 5000
 app.use('/topics',pagesRouter);
-app.listen(5000, console.log("server running"))
+app.listen(PORT, ()=>console.log("server running on ",PORT))
