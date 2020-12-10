@@ -1,9 +1,10 @@
+
+
 body{
     background:#e3e5e6 ;
     width: 100%;
    
 }
-
 
 .container{
     width: 100%; 
@@ -37,19 +38,20 @@ font-family: Titillium Web,Arial,Helvetica
 .custom-nav{
    background: #081624;
  min-height: 12vh;
-} 
+}  
 .navbar-nav {
     display: flex;
     align-items: center;
     height: 100%;
 }
 
+
 .navbar-brand{
     color: #fff;
     font-size: 1.8rem;
     font-weight: 900;
 }
-.nav-link{
+ .nav-link{
     color:#fff;
     font-size: 1.4rem;
   
@@ -72,7 +74,7 @@ font-family: Titillium Web,Arial,Helvetica
     width: 2px;
     background: #438daa;
 
-}
+} 
 .upper-banner{
     background: #081624;
    height: 10vh;

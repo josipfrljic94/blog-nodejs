@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog app</title>
+   
 </head>
 <body>  
 
@@ -18,14 +19,18 @@
             <input required value="<%= topic.author %>" type="text" class="form-control" id="author" name="author">
            
           </div>
-          <div class="form-group">
+          <div class="form-group" >
             <label for="body">Text</label>
-            <textarea    type="text" class="form-control" id="body"  required name="body"><%= topic.text %></textarea>
-            
+        
+          
+            <textarea    type="text" class="form-control" rows="6"   required name="body"><%= topic.text %></textarea>
+           
           </div>
+        
+       
           <div class="form-group">
             <label for="desc">Description</label>
-            <textarea  type="text" class="form-control" id="desc" required  name="desc"> <%= topic.desc %></textarea>
+            <textarea  type="text" class="form-control" id="desc" rows="3"  required  name="desc"> <%= topic.desc %></textarea>
             <div class="form-group">
               <label for="topic" >Topic</label>
               <select required name="topic" id="topic" class="custom-select"> 
@@ -45,8 +50,11 @@
              
           
           </div>
-          <a href="/" class="btn btn-light btn-outline-dark">Cancel</a>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="row col-lg-12 mx-auto">
+            <a href="/" class=" col-lg-6 btn btn-dark btn-outline-dar btn-block rounded-0 h-100 m-0 mt-1 mx-auto ">Cancel</a>
+            <button type="submit" class="btn btn-primary rounded-0 col-lg-6 btn-block h-100 m-0 mt-1 mx-auto">Submit</button>
+          </div>
+        
     
     
 </body>
