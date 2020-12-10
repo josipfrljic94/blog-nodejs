@@ -35,21 +35,21 @@ app.get('/', async (req,res)=>{
 app.get('/programing', async (req,res)=>{
   
     topics= await Topic.find({topic:'programing'}).sort({ datum: 'desc' })
-    res.render('topics/programing',{topics:topics});
+    res.render('topics/index',{topics:topics});
    
   })
 
   app.get('/culture', async (req,res)=>{
   
     topics= await Topic.find({topic:'culture'}).sort({ datum: 'desc' })
-    res.render('topics/culture',{topics:topics});
+    res.render('topics/index',{topics:topics});
    
   })
 
   app.get('/sport', async (req,res)=>{
   
     topics= await Topic.find({topic:'sport'}).sort({ datum: 'desc' })
-    res.render('topics/sport',{topics:topics});
+    res.render('topics/index',{topics:topics});
    
   })
 

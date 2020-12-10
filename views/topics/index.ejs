@@ -8,13 +8,31 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
    
-    <title>Document</title>
+    <title>Blog app</title>
 </head>
 <body>
     <%- include('_navbar') %>
+
+    <% if( topics.length<1){ %>
+       <div class="container">
+           <div class="row mx-auto mt-5">
+               <div class="col-lg-12 bg-dark" style="height:100vh">
+                      <h1 class="text-light font-weight-bold display-1 text-center ">No post yet</h1>
+                      <div class="row my-3">
+                        <a class="btn btn-primary rounded-0 col-lg-6 text-capitalize" href="/">Back</a>
+                        <a class="btn btn-success rounded-0 col-lg-6 text-capitalize  " href="/topics/new">be first one</a>
+                   </div>
+               </div>
+
+           </div>
+         
+       </div>
+   <% } else { %>
+  
+
     <div class="container" >
     
-        <div class=" container contain-container">
+        <div class=" contain-container">
             <div class="row col-md-12  justify-content-start align-items-center m-0 p-0 mt-2 upper-banner"> 
                 <div class="col col-md-2 m-0 p-0  "><p class="upper-header-p m-0 p-0  ">Lates news</p></div> 
             </div> 
@@ -31,7 +49,12 @@
                        
                         <div class="row no-gutters main-card-row  ">
                             <div class="col col-8 h-100 p-0 ">
-                                <img src="/uploads/<%=topics[0].myImg %>" class="img-fluid w-100 rounded-0 m-0 p-0 bb-1 h-100 " alt="mainimg" style="object-fit: cover;">
+
+                             
+                                <img src="/uploads/<%=topics[0].myImg %>" class="img-fluid w-100 rounded-0 m-0 p-0 bb-1 h-100  " alt="mainimg" style="object-fit: cover;">
+
+                             
+                              
                             </div>
 
                             <div class="col col-md-4 main-card-text align-self-center "> 
@@ -124,7 +147,6 @@
            
            <% topics.forEach(topic=>{ %>
             <div class="col-md-10">
-
                 <div class="card  mt-3 w-100 rounded-0" >
                     <img src='/uploads/<%=topic.myImg %>' class="img-fluid img-style rounded-0 alt="topic.myImg">        
                     <div class="card-body w-100 ">
@@ -133,12 +155,12 @@
                       <h6> Author: <%=  topic.author %></h6>
                         <h6><%= topic.datum.toLocaleDateString() %></h6>
                         <div class="d-flex justify-content-center w-100">
-                        <div class="row col-md-12  w-100 p-0">
-                            <a class="col-md-6 text-white text-uppercase rounded-0 m-0 p-0 " style="background: #081624;" href="topics/<%= topic.slug %>"> Read More</a>
-                            <form action="/topics/<%= topic.id %>?_method=DELETE" method="POST" class="col-md-6 w-100">
+                        <div class="row col-md-12  w-100 h-100 p-0">
+                            <a class="col-md-6 text-white text-uppercase rounded-0 m-0 mt-1 p-0 " style="background: #081624;" href="topics/<%= topic.slug %>"> Read More</a>
+                            <form action="/topics/<%= topic.id %>?_method=DELETE" method="POST" class="col-md-6 h-100 p-0 w-100">
                                 
-                                    <button  type="submit" class="btn  text-uppercase w-100  btn-outline-dark  m-0 rounded-0 " style="width: max-content;">Delete</button>
-                               
+                                    <button  type="submit" class="btn  col-md-12 btn-block text-uppercase w-100 h-100 btn-block  btn-outline-dark p-0  m-0 mt-1 rounded-0 " style="width: max-content;">Delete</button>
+                                  
                             </form>
                         </div>
                     </div>
@@ -148,15 +170,13 @@
                     </div>
                     
                   </div>
-
             </div>
        
          
           <% }) %>
         </div>
-
     </div>
-   
+    <% } %>
    
 </body>
 </html>
